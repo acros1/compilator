@@ -483,7 +483,7 @@ static const char *const yytname[] =
   "$end", "error", "$undefined", "tMAIN", "tPRINTF", "tINT", "tVOID",
   "tRETURN", "tCONST", "tVAR_NAME", "tINT_VAL", "tOPEN_BRACE",
   "tCLOSE_BRACE", "tPLUS", "tMINUS", "tMUL", "tSLASH", "tAFFECT",
-  "tOPEN_PAR", "tCLOSE_PAR", "tCOMA", "tEND", "$accept", "PROGRAMME",
+  "tOPEN_PAR", "tCLOSE_PAR", "tCOMA", "tEND", "$accept", "PROGRAM",
   "ARG_LIST", "BODY", "DECLARATION_BLOCK", "DECLARATION_LINE",
   "VAR_DECLARATION_LINE", "CONST_DECLARATION_LINE", "VAR_DECLARATION_LIST",
   "CONST_DECLARATION_LIST", "VAR_DECLARATION", "CONST_DECLARATION",
@@ -1294,7 +1294,7 @@ yyreduce:
 
   case 3:
 #line 46 "spark.y" /* yacc.c:1646  */
-    { printf("ARG_LIST_VOID\n"); }
+    { printf("ARG_LIST\n"); }
 #line 1299 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -1312,7 +1312,7 @@ yyreduce:
 
   case 6:
 #line 57 "spark.y" /* yacc.c:1646  */
-    { printf("DECLARATION_BLOCK_VOID\n"); }
+    { printf("DECLARATION_BLOCK\n"); }
 #line 1317 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -1324,13 +1324,13 @@ yyreduce:
 
   case 8:
 #line 62 "spark.y" /* yacc.c:1646  */
-    { printf("DECLARATION_LINE_VAR\n"); }
+    { printf("DECLARATION_LINE\n"); }
 #line 1329 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
 #line 63 "spark.y" /* yacc.c:1646  */
-    { printf("DECLARATION_LINE_CONST\n"); }
+    { printf("DECLARATION_LINE\n"); }
 #line 1335 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -1354,7 +1354,7 @@ yyreduce:
 
   case 13:
 #line 76 "spark.y" /* yacc.c:1646  */
-    { printf("VAR_DECLARATION_LIST + LIST\n"); }
+    { printf("VAR_DECLARATION_LIST\n"); }
 #line 1359 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -1366,7 +1366,7 @@ yyreduce:
 
   case 15:
 #line 81 "spark.y" /* yacc.c:1646  */
-    { printf("CONST_DECLARATION_LIST + LIST\n"); }
+    { printf("CONST_DECLARATION_LIST\n"); }
 #line 1371 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -1390,7 +1390,7 @@ yyreduce:
 
   case 19:
 #line 96 "spark.y" /* yacc.c:1646  */
-    { printf("INSTRUCTION_BLOCK_VOID\n"); }
+    { printf("INSTRUCTION_BLOCK\n"); }
 #line 1395 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -1402,19 +1402,19 @@ yyreduce:
 
   case 21:
 #line 101 "spark.y" /* yacc.c:1646  */
-    { printf("INSTRUCTION_LINE_AFFECT\n"); }
+    { printf("INSTRUCTION_LINE\n"); }
 #line 1407 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 22:
 #line 102 "spark.y" /* yacc.c:1646  */
-    { printf("INSTRUCTION_LINE_PRINT\n"); }
+    { printf("INSTRUCTION_LINE\n"); }
 #line 1413 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 23:
 #line 103 "spark.y" /* yacc.c:1646  */
-    { printf("INSTRUCTION_LINE_RETURN\n"); }
+    { printf("INSTRUCTION_LINE\n"); }
 #line 1419 "y.tab.c" /* yacc.c:1646  */
     break;
 
@@ -1438,49 +1438,49 @@ yyreduce:
 
   case 27:
 #line 119 "spark.y" /* yacc.c:1646  */
-    { printf("EXPRESSION_INT\n"); }
+    { printf("EXPRESSION\n"); }
 #line 1443 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 28:
 #line 120 "spark.y" /* yacc.c:1646  */
-    { printf("EXPRESSION_VAR_NAME\n"); }
+    { printf("EXPRESSION\n"); }
 #line 1449 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 29:
 #line 121 "spark.y" /* yacc.c:1646  */
-    { printf("EXPRESSION_MUL\n"); }
+    { printf("EXPRESSION\n"); }
 #line 1455 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 30:
 #line 122 "spark.y" /* yacc.c:1646  */
-    { printf("EXPRESSION_DIVIDE\n"); }
+    { printf("EXPRESSION\n"); }
 #line 1461 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 31:
 #line 123 "spark.y" /* yacc.c:1646  */
-    { printf("EXPRESSION_PLUS\n"); }
+    { printf("add $1, $3\n"); }
 #line 1467 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 32:
 #line 124 "spark.y" /* yacc.c:1646  */
-    { printf("EXPRESSION_MINUS\n"); }
+    { printf("EXPRESSION\n"); }
 #line 1473 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 33:
 #line 125 "spark.y" /* yacc.c:1646  */
-    { printf("EXPRESSION_NEG_MUL\n"); }
+    { printf("EXPRESSION\n"); }
 #line 1479 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 34:
 #line 126 "spark.y" /* yacc.c:1646  */
-    { printf("EXPRESSION_PARENTHESIS\n"); }
+    { printf("EXPRESSION\n"); }
 #line 1485 "y.tab.c" /* yacc.c:1646  */
     break;
 

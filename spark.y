@@ -38,12 +38,12 @@
 
 %%
 
-PROGRAMME:
+PROGRAM:
         tVOID tMAIN tOPEN_PAR ARG_LIST tCLOSE_PAR tOPEN_BRACE BODY tCLOSE_BRACE { printf("PROGRAM\n"); }
     ;
 
 ARG_LIST: 
-        /* void */ { printf("ARG_LIST_VOID\n"); }
+        /* void */ { printf("ARG_LIST\n"); }
     |   tINT tVAR_NAME tCOMA ARG_LIST { printf("ARG_LIST\n"); }
     ;
 
@@ -54,13 +54,13 @@ BODY:
 /*-----------------------------------DECLARATIONS-----------------------------------*/
 
 DECLARATION_BLOCK:
-        /* void */ { printf("DECLARATION_BLOCK_VOID\n"); }
+        /* void */ { printf("DECLARATION_BLOCK\n"); }
     |   DECLARATION_LINE DECLARATION_BLOCK { printf("DECLARATION_BLOCK\n"); }
     ;
 
 DECLARATION_LINE:
-        VAR_DECLARATION_LINE { printf("DECLARATION_LINE_VAR\n"); }
-    |   CONST_DECLARATION_LINE { printf("DECLARATION_LINE_CONST\n"); }
+        VAR_DECLARATION_LINE { printf("DECLARATION_LINE\n"); }
+    |   CONST_DECLARATION_LINE { printf("DECLARATION_LINE\n"); }
     ;
 
 VAR_DECLARATION_LINE:
@@ -73,12 +73,12 @@ CONST_DECLARATION_LINE:
 
 VAR_DECLARATION_LIST:
         VAR_DECLARATION { printf("VAR_DECLARATION_LIST\n"); }
-    |   VAR_DECLARATION tCOMA VAR_DECLARATION_LIST { printf("VAR_DECLARATION_LIST + LIST\n"); }
+    |   VAR_DECLARATION tCOMA VAR_DECLARATION_LIST { printf("VAR_DECLARATION_LIST\n"); }
     ;
 
 CONST_DECLARATION_LIST:
         CONST_DECLARATION { printf("CONST_DECLARATION_LIST\n"); }
-    |   CONST_DECLARATION tCOMA CONST_DECLARATION_LIST { printf("CONST_DECLARATION_LIST + LIST\n"); }
+    |   CONST_DECLARATION tCOMA CONST_DECLARATION_LIST { printf("CONST_DECLARATION_LIST\n"); }
     ;
 
 VAR_DECLARATION:
@@ -93,14 +93,14 @@ CONST_DECLARATION:
 /*-----------------------------------INSTRUCTIONS-----------------------------------*/
 
 INSTRUCTION_BLOCK:
-        /* void */ { printf("INSTRUCTION_BLOCK_VOID\n"); }
+        /* void */ { printf("INSTRUCTION_BLOCK\n"); }
     |   INSTRUCTION_LINE INSTRUCTION_BLOCK { printf("INSTRUCTION_BLOCK\n"); }
     ;
 
 INSTRUCTION_LINE:
-        AFFECT tEND { printf("INSTRUCTION_LINE_AFFECT\n"); }
-    |   PRINT tEND { printf("INSTRUCTION_LINE_PRINT\n"); }
-    |   RETURN tEND { printf("INSTRUCTION_LINE_RETURN\n"); }
+        AFFECT tEND { printf("INSTRUCTION_LINE\n"); }
+    |   PRINT tEND { printf("INSTRUCTION_LINE\n"); }
+    |   RETURN tEND { printf("INSTRUCTION_LINE\n"); }
     ;
 
 AFFECT:
@@ -116,14 +116,14 @@ RETURN:
     ;
 
 EXPRESSION:
-        tINT_VAL { printf("EXPRESSION_INT\n"); }
-    |   tVAR_NAME { printf("EXPRESSION_VAR_NAME\n"); }
-    |   EXPRESSION tMUL EXPRESSION { printf("EXPRESSION_MUL\n"); }
-    |   EXPRESSION tSLASH EXPRESSION { printf("EXPRESSION_DIVIDE\n"); }
-    |   EXPRESSION tPLUS EXPRESSION { printf("EXPRESSION_PLUS\n"); }
-    |   EXPRESSION tMINUS EXPRESSION { printf("EXPRESSION_MINUS\n"); }
-    |   tMINUS EXPRESSION %prec tMUL { printf("EXPRESSION_NEG_MUL\n"); }
-    |   tOPEN_PAR EXPRESSION tCLOSE_PAR { printf("EXPRESSION_PARENTHESIS\n"); }
+        tINT_VAL { printf("EXPRESSION\n"); }
+    |   tVAR_NAME { printf("EXPRESSION\n"); }
+    |   EXPRESSION tMUL EXPRESSION { printf("EXPRESSION\n"); }
+    |   EXPRESSION tSLASH EXPRESSION { printf("EXPRESSION\n"); }
+    |   EXPRESSION tPLUS EXPRESSION { printf("add $1, $3\n"); }
+    |   EXPRESSION tMINUS EXPRESSION { printf("EXPRESSION\n"); }
+    |   tMINUS EXPRESSION %prec tMUL { printf("EXPRESSION\n"); }
+    |   tOPEN_PAR EXPRESSION tCLOSE_PAR { printf("EXPRESSION\n"); }
     ;
 
 %%

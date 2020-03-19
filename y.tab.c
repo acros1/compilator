@@ -1288,192 +1288,204 @@ yyreduce:
     {
         case 2:
 #line 42 "spark.y" /* yacc.c:1646  */
-    { printf("main found\n"); }
+    { printf("PROGRAM\n"); }
 #line 1293 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 3:
 #line 46 "spark.y" /* yacc.c:1646  */
-    { printf("no arg in main\n"); }
+    { printf("ARG_LIST_VOID\n"); }
 #line 1299 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 4:
 #line 47 "spark.y" /* yacc.c:1646  */
-    { printf("arg found in main\n"); }
+    { printf("ARG_LIST\n"); }
 #line 1305 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 5:
+#line 51 "spark.y" /* yacc.c:1646  */
+    { printf("BODY\n"); }
+#line 1311 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
 #line 57 "spark.y" /* yacc.c:1646  */
-    { printf("no declaration\n"); }
-#line 1311 "y.tab.c" /* yacc.c:1646  */
+    { printf("DECLARATION_BLOCK_VOID\n"); }
+#line 1317 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+  case 7:
+#line 58 "spark.y" /* yacc.c:1646  */
+    { printf("DECLARATION_BLOCK\n"); }
+#line 1323 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
 #line 62 "spark.y" /* yacc.c:1646  */
-    { printf("var declaration line found\n"); }
-#line 1317 "y.tab.c" /* yacc.c:1646  */
+    { printf("DECLARATION_LINE_VAR\n"); }
+#line 1329 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
 #line 63 "spark.y" /* yacc.c:1646  */
-    { printf("const declaration line found\n"); }
-#line 1323 "y.tab.c" /* yacc.c:1646  */
+    { printf("DECLARATION_LINE_CONST\n"); }
+#line 1335 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
 #line 67 "spark.y" /* yacc.c:1646  */
-    { printf("int found\n"); }
-#line 1329 "y.tab.c" /* yacc.c:1646  */
+    { printf("VAR_DECLARATION_LINE\n"); }
+#line 1341 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
 #line 71 "spark.y" /* yacc.c:1646  */
-    { printf("const found\n"); }
-#line 1335 "y.tab.c" /* yacc.c:1646  */
+    { printf("CONST_DECLARATION_LINE\n"); }
+#line 1347 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
 #line 75 "spark.y" /* yacc.c:1646  */
-    { printf("int declaration\n"); }
-#line 1341 "y.tab.c" /* yacc.c:1646  */
+    { printf("VAR_DECLARATION_LIST\n"); }
+#line 1353 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 13:
 #line 76 "spark.y" /* yacc.c:1646  */
-    { printf("int declaration + list\n"); }
-#line 1347 "y.tab.c" /* yacc.c:1646  */
+    { printf("VAR_DECLARATION_LIST + LIST\n"); }
+#line 1359 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 14:
 #line 80 "spark.y" /* yacc.c:1646  */
-    { printf("const declaration\n"); }
-#line 1353 "y.tab.c" /* yacc.c:1646  */
+    { printf("CONST_DECLARATION_LIST\n"); }
+#line 1365 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
 #line 81 "spark.y" /* yacc.c:1646  */
-    { printf("const declaration + list\n"); }
-#line 1359 "y.tab.c" /* yacc.c:1646  */
+    { printf("CONST_DECLARATION_LIST + LIST\n"); }
+#line 1371 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 16:
 #line 85 "spark.y" /* yacc.c:1646  */
-    { printf("int without value\n"); }
-#line 1365 "y.tab.c" /* yacc.c:1646  */
+    { printf("VAR_DECLARATION\n"); }
+#line 1377 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 17:
 #line 86 "spark.y" /* yacc.c:1646  */
-    { printf("int with value\n"); }
-#line 1371 "y.tab.c" /* yacc.c:1646  */
+    { printf("VAR_DECLARATION_VALUE\n"); }
+#line 1383 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 18:
 #line 90 "spark.y" /* yacc.c:1646  */
-    { printf("const with value\n"); }
-#line 1377 "y.tab.c" /* yacc.c:1646  */
+    { printf("CONST_DECLARATION\n"); }
+#line 1389 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 19:
 #line 96 "spark.y" /* yacc.c:1646  */
-    { printf("no instruction\n"); }
-#line 1383 "y.tab.c" /* yacc.c:1646  */
+    { printf("INSTRUCTION_BLOCK_VOID\n"); }
+#line 1395 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 20:
 #line 97 "spark.y" /* yacc.c:1646  */
-    { printf("instruction found\n"); }
-#line 1389 "y.tab.c" /* yacc.c:1646  */
+    { printf("INSTRUCTION_BLOCK\n"); }
+#line 1401 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 21:
 #line 101 "spark.y" /* yacc.c:1646  */
-    { printf("affect instruction\n"); }
-#line 1395 "y.tab.c" /* yacc.c:1646  */
+    { printf("INSTRUCTION_LINE_AFFECT\n"); }
+#line 1407 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 22:
 #line 102 "spark.y" /* yacc.c:1646  */
-    { printf("print instruction\n"); }
-#line 1401 "y.tab.c" /* yacc.c:1646  */
+    { printf("INSTRUCTION_LINE_PRINT\n"); }
+#line 1413 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 23:
 #line 103 "spark.y" /* yacc.c:1646  */
-    { printf("return instruction\n"); }
-#line 1407 "y.tab.c" /* yacc.c:1646  */
+    { printf("INSTRUCTION_LINE_RETURN\n"); }
+#line 1419 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 24:
 #line 107 "spark.y" /* yacc.c:1646  */
-    { printf("affect instruction with expression\n"); }
-#line 1413 "y.tab.c" /* yacc.c:1646  */
+    { printf("AFFECT\n"); }
+#line 1425 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 25:
 #line 111 "spark.y" /* yacc.c:1646  */
-    { printf("printf instruction with expression\n"); }
-#line 1419 "y.tab.c" /* yacc.c:1646  */
+    { printf("PRINT\n"); }
+#line 1431 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 26:
 #line 115 "spark.y" /* yacc.c:1646  */
-    { printf("return instruction with expression\n"); }
-#line 1425 "y.tab.c" /* yacc.c:1646  */
+    { printf("RETURN\n"); }
+#line 1437 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 27:
 #line 119 "spark.y" /* yacc.c:1646  */
-    { printf("int affect\n"); }
-#line 1431 "y.tab.c" /* yacc.c:1646  */
+    { printf("EXPRESSION_INT\n"); }
+#line 1443 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 28:
 #line 120 "spark.y" /* yacc.c:1646  */
-    { printf("VAR_NAME affect\n"); }
-#line 1437 "y.tab.c" /* yacc.c:1646  */
+    { printf("EXPRESSION_VAR_NAME\n"); }
+#line 1449 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 29:
 #line 121 "spark.y" /* yacc.c:1646  */
-    { printf("mul\n"); }
-#line 1443 "y.tab.c" /* yacc.c:1646  */
+    { printf("EXPRESSION_MUL\n"); }
+#line 1455 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 30:
 #line 122 "spark.y" /* yacc.c:1646  */
-    { printf("divide\n"); }
-#line 1449 "y.tab.c" /* yacc.c:1646  */
+    { printf("EXPRESSION_DIVIDE\n"); }
+#line 1461 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 31:
 #line 123 "spark.y" /* yacc.c:1646  */
-    { printf("plus\n"); }
-#line 1455 "y.tab.c" /* yacc.c:1646  */
+    { printf("EXPRESSION_PLUS\n"); }
+#line 1467 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 32:
 #line 124 "spark.y" /* yacc.c:1646  */
-    { printf("minus\n"); }
-#line 1461 "y.tab.c" /* yacc.c:1646  */
+    { printf("EXPRESSION_MINUS\n"); }
+#line 1473 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 33:
 #line 125 "spark.y" /* yacc.c:1646  */
-    { printf("mul by negative value\n"); }
-#line 1467 "y.tab.c" /* yacc.c:1646  */
+    { printf("EXPRESSION_NEG_MUL\n"); }
+#line 1479 "y.tab.c" /* yacc.c:1646  */
     break;
 
   case 34:
 #line 126 "spark.y" /* yacc.c:1646  */
-    { printf("expression with parenthesis\n"); }
-#line 1473 "y.tab.c" /* yacc.c:1646  */
+    { printf("EXPRESSION_PARENTHESIS\n"); }
+#line 1485 "y.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 1477 "y.tab.c" /* yacc.c:1646  */
+#line 1489 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires

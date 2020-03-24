@@ -10,27 +10,41 @@
         exit(1);
         return 1;
     }
+
+    typedef struct {
+        int type; // 0 = const | 1 = var
+        char *name;
+    } symbol;
+
+    symbol symbol_array[256];
+
+    int next_symbol_index = 0;
 %}
 
-%token  tMAIN 
-        tPRINTF
-        tINT
-        tVOID
-        tRETURN
-        tCONST 
-        tVAR_NAME 
-        tINT_VAL 
-        tOPEN_BRACE 
-        tCLOSE_BRACE 
-        tPLUS 
-        tMINUS 
-        tMUL
-        tSLASH 
-        tAFFECT 
-        tOPEN_PAR 
-        tCLOSE_PAR 
-        tCOMA 
-        tEND
+%union {
+    int nb;
+    char *str;
+}
+
+%token          tMAIN 
+                tPRINTF
+                tINT
+                tVOID
+                tRETURN
+                tCONST 
+        <str>   tVAR_NAME 
+        <nb>    tINT_VAL 
+                tOPEN_BRACE 
+                tCLOSE_BRACE 
+                tPLUS 
+                tMINUS 
+                tMUL
+                tSLASH 
+                tAFFECT 
+                tOPEN_PAR 
+                tCLOSE_PAR 
+                tCOMA 
+                tEND
 
 %right tAFFECT
 %left tPLUS tMINUS

@@ -29,10 +29,12 @@
 }
 
 [a-zA-Z][_0-9a-zA-Z]* {
+    yylval.str = strcpy(yytext);
     return tVAR_NAME;
 }
 
 [0-9]+(e[0-9]+)? {
+    yylval.nb = atoi(yytext);
     return tINT_VAL;
 }
 

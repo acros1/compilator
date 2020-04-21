@@ -1,0 +1,36 @@
+asm = open("result").readlines()
+asm = [l.strip().split(" ") for l in asm]
+ip = 0
+
+mem = [0] * 16
+
+def dump():
+    for i in range(len(mem)):
+        print("@%04d: %4d" % (i, mem[i]))
+
+while ip < len(asm):
+    if asm[ip][0] == "AFC":
+        mem[int(asm[ip][1])] = int(asm[ip][2])
+        ip += 1
+    elif asm[ip][0] == "CPY":
+        mem[int(asm[ip][1])] = mem[int(asm[ip][2])]
+        ip += 1
+    elif asm[ip][0] == "PRI":
+        print(mem[int(asm[ip][1])])
+        ip += 1
+    elif asm[ip][0] == "ADD":
+        mem[int(asm[ip][1])] = mem[int(asm[ip][1])] + mem[int(asm[ip][2])]
+        ip += 1
+    elif asm[ip][0] == "DIV":
+        mem[int(asm[ip][1])] = mem[int(asm[ip][1])] / mem[int(asm[ip][2])]
+        ip += 1
+    elif asm[ip][0] == "MUL":
+        mem[int(asm[ip][1])] = mem[int(asm[ip][1])] * mem[int(asm[ip][2])]
+        ip += 1
+    elif asm[ip][0] == "SUB":
+        mem[int(asm[ip][1])] = mem[int(asm[ip][1])] - mem[int(asm[ip][2])]
+        ip += 1
+    elif asm[ip][0] == "JMP":
+        ip = int(asm[ip][1])
+
+dump

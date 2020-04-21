@@ -28,8 +28,16 @@
     return tCONST;
 }
 
+"if" {
+    return tIF;
+}
+
+"else" {
+    return tELSE;
+}
+
 [a-zA-Z][_0-9a-zA-Z]* {
-    yylval.str = strcpy(yytext);
+    yylval.str = strdup(yytext);
     return tVAR_NAME;
 }
 

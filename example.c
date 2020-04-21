@@ -1,9 +1,9 @@
 void main() { 
-    int i, j, k, r ;
-    i = 3 ;
+    int i, j = 3, k, r ;
+    const y = 3;
+    i = 132 ;
     j = 4 ;
-    k = 8 ;
-    printf ( i ) ;
+    k = 800 ;
     r = (( i + j ) * ( i + ( k / j ) ) );
     printf ( r ) ;
 }

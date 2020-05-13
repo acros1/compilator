@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/processor/testUAL_isim_beh.exe" -prj "C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/processor/testUAL_beh.prj" "work.testUAL" 
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/PSI/processor/testInstructionMemory_isim_beh.exe" -prj "C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/PSI/processor/testInstructionMemory_beh.prj" "work.testInstructionMemory" 

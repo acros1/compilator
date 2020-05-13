@@ -1,5 +1,5 @@
 ISim log file
-Running: C:\Users\Alex\OneDrive - insa-toulouse.fr\Cours\4IR\S2\processor\testUAL_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/processor/testUAL_isim_beh.wdb 
+Running: C:\Users\Alex\OneDrive - insa-toulouse.fr\Cours\4IR\S2\PSI\processor\testInstructionMemory_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/PSI/processor/testInstructionMemory_isim_beh.wdb 
 ISim O.87xd (signature 0xc3576ebc)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -12,12 +12,19 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # restart
-# run 100ns
+# run 1.00us
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 100ns
-# run 100ns
-# run 100ns
+# run 1.00us
+# run 1.00us
+ISim O.87xd (signature 0xc3576ebc)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
 ISim O.87xd (signature 0xc3576ebc)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.

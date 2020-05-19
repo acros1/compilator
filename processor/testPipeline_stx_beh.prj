@@ -1,0 +1,6 @@
+vhdl isim_temp "UAL.vhd"
+vhdl isim_temp "registersFile.vhd"
+vhdl isim_temp "instructionMemory.vhd"
+vhdl isim_temp "dataMemory.vhd"
+vhdl isim_temp "pipeline.vhd"
+vhdl isim_temp "testPipeline.vhd"

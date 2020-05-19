@@ -1,10 +1,14 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/PSI/processor/testInstructionMemory_isim_beh.exe" -prj "C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/PSI/processor/testInstructionMemory_beh.prj" "work.testInstructionMemory" 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/PSI/processor/testPipeline_isim_beh.exe" -prj "C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/PSI/processor/testPipeline_beh.prj" "work.testPipeline" 
 ISim O.87xd (signature 0xc3576ebc)
 Number of CPUs detected in this system: 8
 Turning on mult-threading, number of parallel sub-compilation jobs: 16 
 Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/PSI/processor/UAL.vhd" into library work
+Parsing VHDL file "C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/PSI/processor/registersFile.vhd" into library work
 Parsing VHDL file "C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/PSI/processor/instructionMemory.vhd" into library work
-Parsing VHDL file "C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/PSI/processor/testInstructionMemory.vhd" into library work
+Parsing VHDL file "C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/PSI/processor/dataMemory.vhd" into library work
+Parsing VHDL file "C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/PSI/processor/pipeline.vhd" into library work
+Parsing VHDL file "C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/PSI/processor/testPipeline.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
@@ -12,10 +16,15 @@ Compiling package std_logic_1164
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
 Compiling package numeric_std
+Compiling architecture behavioral of entity dataMemory [datamemory_default]
 Compiling architecture behavioral of entity instructionMemory [instructionmemory_default]
-Compiling architecture behavior of entity testinstructionmemory
+Compiling architecture behavioral of entity registersFile [registersfile_default]
+Compiling architecture behavioral of entity UAL [ual_default]
+Compiling architecture behavioral of entity pipeline [pipeline_default]
+Compiling architecture behavior of entity testpipeline
 Time Resolution for simulation is 1ps.
-Compiled 8 VHDL Units
-Built simulation executable C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/PSI/processor/testInstructionMemory_isim_beh.exe
-Fuse Memory Usage: 37264 KB
-Fuse CPU Usage: 484 ms
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 16 VHDL Units
+Built simulation executable C:/Users/Alex/OneDrive - insa-toulouse.fr/Cours/4IR/S2/PSI/processor/testPipeline_isim_beh.exe
+Fuse Memory Usage: 37232 KB
+Fuse CPU Usage: 499 ms

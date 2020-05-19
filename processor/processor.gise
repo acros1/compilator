@@ -64,18 +64,20 @@
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="registersFile_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testDataMemory_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testDataMemory_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="testDataMemory_isim_beh.wdb"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testInstructionMemory_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testInstructionMemory_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="testInstructionMemory_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testPipeline_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testPipeline_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="testPipeline_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testPipeline_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testRegisterFile_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testRegisterFile_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="testRegisterFile_isim_beh.wdb"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testUAL_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testUAL_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
@@ -87,37 +89,37 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1589363022" xil_pn:in_ck="6033552200749483517" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1589363022">
+    <transform xil_pn:end_ts="1589881623" xil_pn:in_ck="-3590695246121785143" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1589881623">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="UAL.vhd"/>
       <outfile xil_pn:name="dataMemory.vhd"/>
       <outfile xil_pn:name="instructionMemory.vhd"/>
+      <outfile xil_pn:name="pipeline.vhd"/>
       <outfile xil_pn:name="registersFile.vhd"/>
       <outfile xil_pn:name="testDataMemory.vhd"/>
       <outfile xil_pn:name="testInstructionMemory.vhd"/>
+      <outfile xil_pn:name="testPipeline.vhd"/>
       <outfile xil_pn:name="testRegisterFile.vhd"/>
       <outfile xil_pn:name="testUAL.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1589362978" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3178448932819340401" xil_pn:start_ts="1589362978">
+    <transform xil_pn:end_ts="1589879975" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-357733486999414804" xil_pn:start_ts="1589879975">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1589362978" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3272808037234811631" xil_pn:start_ts="1589362978">
+    <transform xil_pn:end_ts="1589879975" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="673421248550339690" xil_pn:start_ts="1589879975">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1587568469" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="495821440454573105" xil_pn:start_ts="1587568469">
+    <transform xil_pn:end_ts="1589879489" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-4213309401129195131" xil_pn:start_ts="1589879489">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1589363022" xil_pn:in_ck="6033552200749483517" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1589363022">
+    <transform xil_pn:end_ts="1589881623" xil_pn:in_ck="-3590695246121785143" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1589881623">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -128,13 +130,15 @@
       <outfile xil_pn:name="UAL.vhd"/>
       <outfile xil_pn:name="dataMemory.vhd"/>
       <outfile xil_pn:name="instructionMemory.vhd"/>
+      <outfile xil_pn:name="pipeline.vhd"/>
       <outfile xil_pn:name="registersFile.vhd"/>
       <outfile xil_pn:name="testDataMemory.vhd"/>
       <outfile xil_pn:name="testInstructionMemory.vhd"/>
+      <outfile xil_pn:name="testPipeline.vhd"/>
       <outfile xil_pn:name="testRegisterFile.vhd"/>
       <outfile xil_pn:name="testUAL.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1589363026" xil_pn:in_ck="6033552200749483517" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7156578303798387038" xil_pn:start_ts="1589363022">
+    <transform xil_pn:end_ts="1589881627" xil_pn:in_ck="-3590695246121785143" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1168706254800459832" xil_pn:start_ts="1589881623">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -145,12 +149,11 @@
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="testInstructionMemory_beh.prj"/>
-      <outfile xil_pn:name="testInstructionMemory_isim_beh.exe"/>
+      <outfile xil_pn:name="testPipeline_beh.prj"/>
+      <outfile xil_pn:name="testPipeline_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1589363026" xil_pn:in_ck="-7432346332332122760" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4206351910520173999" xil_pn:start_ts="1589363026">
+    <transform xil_pn:end_ts="1589881627" xil_pn:in_ck="-8350205787250945763" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-814415783560128635" xil_pn:start_ts="1589881627">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForProperties"/>
@@ -158,8 +161,7 @@
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="testInstructionMemory_isim_beh.wdb"/>
+      <outfile xil_pn:name="testPipeline_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1588838790" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1588838790">
       <status xil_pn:value="SuccessfullyRun"/>

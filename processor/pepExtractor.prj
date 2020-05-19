@@ -1,1 +1,5 @@
+work	"UAL.vhd"
+work	"dataMemory.vhd"
 work	"instructionMemory.vhd"
+work	"pipeline.vhd"
+work	"registersFile.vhd"

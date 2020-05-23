@@ -9,7 +9,7 @@ void main() {
     }
     i = 132 ;
     j = 4 ;
-    k = 800 ;
+    k = 238 ;
     r = (( i + j ) * ( i + ( k / j ) ) );
     printf ( r ) ;
 }

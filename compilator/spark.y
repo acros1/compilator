@@ -10,7 +10,7 @@
     extern int yylex();
 
     int yyerror(char* s)  {
-        printf("yyerror");
+        printf("yyerror\n");
         exit(1);
         return 1;
     }
@@ -88,7 +88,7 @@
                 tCONST
         <nb>    tIF
                 tELSE 
-                tWHILE
+        <nb>    tWHILE
         <str>   tVAR_NAME 
         <nb>    tINT_VAL 
                 tOPEN_BRACE 
@@ -165,7 +165,7 @@ VAR_DECLARATION:
             symbol_array[next_symbol_index].type = 1;
             symbol_array[next_symbol_index].name = strdup($1);
             //printf("AFC %d %d\n", next_symbol_index, $3);
-            put_instruction2("AFC", next_symbol_index, $3);
+            put_instruction2("AFC", next_symbol_index, $4);
             next_symbol_index++;
         }
     ;
@@ -191,7 +191,8 @@ INSTRUCTION_LINE:
         AFFECT tEND {  }
     |   PRINT tEND {  }
     |   RETURN tEND {  }
-    |   IF 
+    |   IF
+    |   WHILE 
     ;
 
 // declaration is impossible in IF_ELSE
@@ -213,15 +214,18 @@ IF_ELSE:
     |   tELSE tOPEN_BRACE BODY tCLOSE_BRACE { }
     ;
 
-//WHILE:
-//        tWHILE tOPEN_PAR {
-//            $1 = next_instruction_index;
-//        } EXPRESSION tCLOSE_PAR tOPEN_BRACE BODY {
-            // Need to revert $3 value : it's false and while have to works only if it's true
-            
-//            put_instruction2("JMF", $1, $3); // JMF pattern is "JMF n_instruction @X"
-//        } tCLOSE_BRACE { }
-//    ;
+WHILE:
+        tWHILE {
+            $1 = next_instruction_index; // used to loop, back to the beginning of the while
+        } tOPEN_PAR EXPRESSION tCLOSE_PAR {
+            int line = put_instruction2("JMF", 0, $3); // JMF pattern is "JMF n_instruction @X"
+            printf("XXXXXXX %d", $3);
+            $1 |= line << 8;
+        } tOPEN_BRACE BODY {
+            int line = put_instruction1("JMP", ($1 & 0xff)); // JMF pattern is "JMF n_instruction @X"
+            patch(($1 >> 8), next_instruction_index);
+        } tCLOSE_BRACE { }
+    ;
 
 AFFECT:
         tVAR_NAME tAFFECT EXPRESSION {
@@ -283,6 +287,7 @@ EXPRESSION:
             put_instruction2("SUB", $1, $3);
             next_symbol_index--;
             $$ = $1;
+            printf("YYYYYYYYYY %d", $$);
         }
     |   tMINUS EXPRESSION %prec tMUL { 
 
@@ -300,13 +305,13 @@ int main() {
     for (int j = 0 ; j < next_instruction_index ; j++) {
         instruction *i = &instruction_array[j];
         if( (i->op2 == -1) && (i->op3 == -1) ) {
-            printf("%s %d\n", i->opCode, i->op1);
+            printf("#%d : %s %d\n", j, i->opCode, i->op1);
         }
         else if( i->op3 == -1 ) {
-            printf("%s %d %d\n", i->opCode, i->op1, i->op2);
+            printf("#%d : %s %d %d\n", j, i->opCode, i->op1, i->op2);
         }
         else {
-            printf("%s %d %d %d\n", i->opCode, i->op1, i->op2, i->op3);
+            printf("#%d : %s %d %d %d\n", j, i->opCode, i->op1, i->op2, i->op3);
         }
     }
 }

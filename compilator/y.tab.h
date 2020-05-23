@@ -53,19 +53,20 @@ extern int yydebug;
     tCONST = 263,
     tIF = 264,
     tELSE = 265,
-    tVAR_NAME = 266,
-    tINT_VAL = 267,
-    tOPEN_BRACE = 268,
-    tCLOSE_BRACE = 269,
-    tPLUS = 270,
-    tMINUS = 271,
-    tMUL = 272,
-    tSLASH = 273,
-    tAFFECT = 274,
-    tOPEN_PAR = 275,
-    tCLOSE_PAR = 276,
-    tCOMA = 277,
-    tEND = 278
+    tWHILE = 266,
+    tVAR_NAME = 267,
+    tINT_VAL = 268,
+    tOPEN_BRACE = 269,
+    tCLOSE_BRACE = 270,
+    tPLUS = 271,
+    tMINUS = 272,
+    tMUL = 273,
+    tSLASH = 274,
+    tAFFECT = 275,
+    tOPEN_PAR = 276,
+    tCLOSE_PAR = 277,
+    tCOMA = 278,
+    tEND = 279
   };
 #endif
 /* Tokens.  */
@@ -77,19 +78,20 @@ extern int yydebug;
 #define tCONST 263
 #define tIF 264
 #define tELSE 265
-#define tVAR_NAME 266
-#define tINT_VAL 267
-#define tOPEN_BRACE 268
-#define tCLOSE_BRACE 269
-#define tPLUS 270
-#define tMINUS 271
-#define tMUL 272
-#define tSLASH 273
-#define tAFFECT 274
-#define tOPEN_PAR 275
-#define tCLOSE_PAR 276
-#define tCOMA 277
-#define tEND 278
+#define tWHILE 266
+#define tVAR_NAME 267
+#define tINT_VAL 268
+#define tOPEN_BRACE 269
+#define tCLOSE_BRACE 270
+#define tPLUS 271
+#define tMINUS 272
+#define tMUL 273
+#define tSLASH 274
+#define tAFFECT 275
+#define tOPEN_PAR 276
+#define tCLOSE_PAR 277
+#define tCOMA 278
+#define tEND 279
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -101,7 +103,7 @@ union YYSTYPE
     int nb;
     char *str;
 
-#line 105 "y.tab.h" /* yacc.c:1909  */
+#line 107 "y.tab.h" /* yacc.c:1909  */
 };
 
 typedef union YYSTYPE YYSTYPE;
